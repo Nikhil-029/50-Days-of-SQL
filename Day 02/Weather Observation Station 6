@@ -1,0 +1,1 @@
+Select City from station where Left(city,1) IN ('a','e','i','o','u'); 
