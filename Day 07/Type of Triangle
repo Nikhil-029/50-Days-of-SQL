@@ -1,0 +1,9 @@
+SELECT
+  CASE
+    WHEN (A + B <= C) | (B + C <= A) | (A + C <= B) THEN 'Not A Triangle'
+    WHEN (A = B) & (B = C) THEN 'Equilateral'
+    WHEN ((A = B) & (A != C)) | ((B = C) & (B != A)) | ((A = C) & (A != B)) THEN 'Isosceles'
+    WHEN (A != B) & (B != C) & (A != C) THEN 'Scalene'
+  END AS Triangle_Type
+FROM
+  TRIANGLES;
